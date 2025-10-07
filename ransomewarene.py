@@ -167,9 +167,9 @@ def decrypt_file(path: Path, key: bytes) -> None:
 
 def create_demo_files(root: Path):
     samples = {
-        "readme.txt": "This is a test file.",
-        "notes.txt": "These files will be encrypted.",
-        "hello.txt": "Hello world.",
+        "readme.txt": "Đây là file thử nghiệm.",
+        "notes.txt": "Những file này sẽ bị mã hóa.",
+        "hello.txt": "Lê Minh Nhật.",
         "data.csv": "id,value\n1,alpha\n2,beta\n",
     }
     for name, content in samples.items():
@@ -224,9 +224,9 @@ def show_key_popup(root: Path) -> bool:
     app = tk.Tk()
     app.withdraw()
     prompt = (
-        f"Your files have been encrypted.\n\n"
-        f"Enter the decryption key to restore them.\n"
-        f"Hint: DEMO KEY is known.\n"
+        f"File của bạn đã bị mã hóa.\n\n"
+        f"Nhập khóa giải mã để khôi phục chúng.\n"
+        f"Gợi ý: DEMO KEY đã được biết.\n"
     )
     answer = simpledialog.askstring("Decryption Required", prompt, parent=app, show='*')
     app.destroy()
@@ -359,3 +359,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
